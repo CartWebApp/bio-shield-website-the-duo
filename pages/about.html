@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us - BioShield</title>
+  <style>
+    :root{
+      --sidebar: 220px;
+      --accent:#0ea5e9;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --radius:16px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111}
+    .layout{display:grid;grid-template-columns:var(--sidebar) 1fr;min-height:100vh}
+
+    /* Sidebar */
+    .sidebar{background:#fff;border-right:1px solid #e6edf3;padding:24px;display:flex;flex-direction:column;gap:14px}
+    .brand{font-weight:700;display:flex;align-items:center;gap:10px}
+    .logo{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .nav-link{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;color:var(--muted);text-decoration:none}
+    .nav-link:hover{background:#f1f7fb;color:#111}
+    .cart-btn{margin-top:auto;padding:8px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#fff;border-radius:10px;display:flex;align-items:center;gap:8px;justify-content:center}
+
+    /* Main */
+    main{padding:28px}
+    .hero{background:linear-gradient(180deg, rgba(14,165,233,0.06), rgba(99,102,241,0.03));border-radius:var(--radius);padding:36px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+    .hero h1{font-size:34px;margin:0;text-align:center}
+
+    .about-section{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;margin-bottom:36px}
+    .about-section .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(8,15,26,0.04)}
+    .about-section img{width:100%;border-radius:12px;object-fit:cover;height:100%}
+
+    .values{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:24px}
+    .value-card{background:var(--card);padding:18px;border-radius:12px;text-align:center;box-shadow:0 6px 18px rgba(8,15,26,0.04)}
+    .value-card h3{margin:0 0 10px;font-size:18px;color:#0f172a}
+    .value-card p{color:var(--muted);font-size:14px}
+
+    footer{margin-top:36px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr}
+      .sidebar{flex-direction:row;gap:12px;overflow:auto;padding:12px}
+      main{padding:18px}
+      .about-section{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">BS</div><div>BioShield</div></div>
+      <nav>
+        <a class="nav-link" href="../index.html">🏠 Home</a>
+        <a class="nav-link" href="products.html">🛍️ Products</a>
+        <a class="nav-link" href="about.html">ℹ️ About us</a>
+        <a class="nav-link" href="contact.html">📞 Contact</a>
+      </nav>
+      <button class="cart-btn" onclick="window.location.href='cart.html'">🛒 Cart (0)</button>
+    </aside>
+
+    <main>
+      <section class="hero">
+        <h1>About BioShield</h1>
+      </section>
+
+      <section class="about-section">
+        <div class="card">
+          <h2>Who We Are</h2>
+          <p style="color:var(--muted);">
+            At BioShield, we believe nature provides the best defense. Our team of scientists, herbalists, 
+            and environmental advocates work together to create safe, effective mosquito repellents powered 
+            by plants. We’re committed to protecting families while protecting the planet.
+          </p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop" alt="Team working together">
+        </div>
+      </section>
+
+      <h2 class="section-title">Our Values</h2>
+      <div class="values">
+        <div class="value-card">
+          <h3>🌱 Sustainability</h3>
+          <p>Eco-friendly formulas and packaging that minimize our impact on the environment.</p>
+        </div>
+        <div class="value-card">
+          <h3>👨‍👩‍👧‍👦 Safety</h3>
+          <p>Products gentle enough for kids and pets — without harsh chemicals.</p>
+        </div>
+        <div class="value-card">
+          <h3>🧪 Innovation</h3>
+          <p>Constantly researching and improving our products for better protection.</p>
+        </div>
+        <div class="value-card">
+          <h3>🤝 Community</h3>
+          <p>Working with local farmers and supporting mosquito-borne disease prevention efforts worldwide.</p>
+        </div>
+      </div>
+
+      <footer>© 2025 BioShield — Made with care.</footer>
+    </main>
+  </div>
+</body>
+</html>
+1`

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BioShield | Products</title>
+  <style>
+    :root {
+      --sidebar: 220px;
+      --accent:#0ea5e9;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --radius:16px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111}
+    .layout{display:grid;grid-template-columns:var(--sidebar) 1fr;min-height:100vh}
+
+    /* Sidebar */
+    .sidebar{background:#fff;border-right:1px solid #e6edf3;padding:24px;display:flex;flex-direction:column;gap:14px}
+    .brand{font-weight:700;display:flex;align-items:center;gap:10px}
+    .logo{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .nav-link{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;color:var(--muted);text-decoration:none}
+    .nav-link:hover{background:#f1f7fb;color:#111}
+    .cart-btn{margin-top:auto;padding:8px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#fff;border-radius:10px;display:flex;align-items:center;gap:8px;justify-content:center}
+
+    /* Main */
+    main{padding:28px}
+    h1{margin:0 0 20px;font-size:32px}
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      gap:20px;
+    }
+    .product-card{
+      background:var(--card);
+      padding:16px;
+      border-radius:12px;
+      border:1px solid #eef2f7;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 4px 14px rgba(8,15,26,0.03);
+    }
+    .product-thumb{
+      height:140px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#eef2ff,#f3f4f6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:12px;
+    }
+    .product-info{
+      flex:1;
+    }
+    .product-info h3{margin:0;font-size:16px;font-weight:600}
+    .product-info p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+    .price{font-weight:700}
+    .add{background:var(--accent);color:white;padding:8px 10px;border-radius:8px;border:none;cursor:pointer}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr}
+      .sidebar{flex-direction:row;gap:12px;overflow:auto;padding:12px}
+      main{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">BS</div><div>BioShield</div></div>
+      <nav>
+        <a class="nav-link" href="../index.html">🏠 Home</a>
+        <a class="nav-link" href="products.html">🛍️ Products</a>
+        <a class="nav-link" href="about.html">ℹ️ About us</a>
+        <a class="nav-link" href="contact.html">📞 Contact</a>
+      </nav>
+      <button class="cart-btn" onclick="window.location.href='cart.html'">🛒 Cart (0)</button>
+    </aside>
+    <main>
+      <h1>Our Products</h1>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-thumb">
+            <svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#c7e9fb" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="product-info">
+            <h3>BioShield Spray</h3>
+            <p>100ml — plant-based mosquito protection.</p>
+          </div>
+          <div class="price-row">
+            <div class="price">$13.99</div>
+            <button class="add">Add to cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-thumb">
+            <svg width="70" height="70" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#c7e9fb" stroke-width="2"/><path d="M7 12h10" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="product-info">
+            <h3>Repel Balm</h3>
+            <p>30g — easy-to-apply solid balm.</p>
+          </div>
+          <div class="price-row">
+            <div class="price">$11.67</div>
+            <button class="add">Add to cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-thumb">
+            <svg width="70" height="70" viewBox="0 0 24 24" fill="none"><path d="M12 2v20" stroke="#c7e9fb" stroke-width="2"/><path d="M5 12h14" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="product-info">
+            <h3>Citronella Candle</h3>
+            <p>200g — perfect for indoor & outdoor use.</p>
+          </div>
+          <div class="price-row">
+            <div class="price">$9.49</div>
+            <button class="add">Add to cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-thumb">
+            <svg width="70" height="70" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#c7e9fb" stroke-width="2"/><path d="M9 9l6 6" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="product-info">
+            <h3>Travel Stick</h3>
+            <p>10ml — compact, on-the-go repellent.</p>
+          </div>
+          <div class="price-row">
+            <div class="price">$6.99</div>
+            <button class="add">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <footer style="margin-top:36px;color:var(--muted);font-size:13px">
+        © 2025 BioShield — Made with care.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Cart counter demo
+    const cartBtn = document.querySelector('.cart-btn');
+    const adds = document.querySelectorAll('.add');
+    let count = 0;
+    adds.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        count++;
+        cartBtn.textContent = '🛒 Cart ('+count+')';
+        btn.textContent = 'Added';
+        btn.disabled = true;
+      });
+    });
+  </script>
+</body>
+</html>

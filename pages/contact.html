@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us - BioShield</title>
+  <style>
+    :root{
+      --sidebar: 220px;
+      --accent:#0ea5e9;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --radius:16px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111}
+    .layout{display:grid;grid-template-columns:var(--sidebar) 1fr;min-height:100vh}
+    /* Sidebar */
+    .sidebar{background:#fff;border-right:1px solid #e6edf3;padding:24px;display:flex;flex-direction:column;gap:14px}
+    .brand{font-weight:700;display:flex;align-items:center;gap:10px}
+    .logo{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .nav-link{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;color:var(--muted);text-decoration:none}
+    .nav-link:hover{background:#f1f7fb;color:#111}
+    .cart-btn{margin-top:auto;padding:8px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#fff;border-radius:10px;display:flex;align-items:center;gap:8px;justify-content:center}
+    /* Main */
+    main{padding:28px}
+    .hero{background:linear-gradient(180deg, rgba(14,165,233,0.06), rgba(99,102,241,0.03));border-radius:var(--radius);padding:36px;display:flex;align-items:center;justify-content:center;margin-bottom:28px}
+    .hero h1{font-size:34px;margin:0}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(8,15,26,0.04)}
+    form{display:flex;flex-direction:column;gap:14px}
+    label{font-weight:600}
+    input, textarea{padding:10px;border:1px solid #d1d5db;border-radius:8px;font:inherit}
+    textarea{resize:vertical;min-height:120px}
+    button.submit{background:var(--accent);color:#fff;padding:12px;border:none;border-radius:8px;cursor:pointer;font-weight:600}
+    button.submit:hover{background:#0284c7}
+    .info p{margin:6px 0;color:var(--muted)}
+    footer{margin-top:36px;color:var(--muted);font-size:13px}
+    @media(max-width:900px){
+      .layout{grid-template-columns:1fr}
+      .sidebar{flex-direction:row;gap:12px;overflow:auto;padding:12px}
+      main{padding:18px}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">BS</div><div>BioShield</div></div>
+      <nav>
+        <a class="nav-link" href="../index.html">🏠 Home</a>
+        <a class="nav-link" href="products.html">🛍️ Products</a>
+        <a class="nav-link" href="about.html">ℹ️ About us</a>
+        <a class="nav-link" href="contact.html">📞 Contact</a>
+      </nav>
+      <button class="cart-btn" onclick="window.location.href='cart.html'">🛒 Cart (0)</button>
+    </aside>
+    <main>
+      <section class="hero" aria-labelledby="contact-title">
+        <h1 id="contact-title">Get in touch with us</h1>
+      </section>
+      <section class="contact-grid">
+        <div class="card">
+          <h3>Send us a message</h3>
+          <form>
+            <div>
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div>
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="card info">
+          <h3>Contact Information</h3>
+          <p><strong>Email:</strong> support@bioshield.com</p>
+          <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+          <p><strong>Address:</strong><br> 123 Greenway Blvd<br>Eco City, Earth 00000</p>
+          <p>We’ll get back to you within 1–2 business days.</p>
+        </div>
+      </section>
+      <footer>© 2025 BioShield — Made with care.</footer>
+    </main>
+  </div>
+</body>
+</html>

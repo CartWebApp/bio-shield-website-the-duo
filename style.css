@@ -25,10 +25,10 @@
     line-height: 1.5;
   }
   .extra-large-text {
-    font-size: 26px;
+    font-size: 24px;
   }
   .large-text {
-    font-size: 22px;
+    font-size: 20px;
   }
   .layout {
     display: grid;
@@ -134,10 +134,29 @@
 
   .mission{
     display: grid;
-    grid-template-columns: 1fr 240px;
+    grid-template-columns: .5fr 200px;
+    justify-content: center;
     gap: 16px;
     align-items: start;
     margin-bottom: 28px;
+    margin-right: 28px;
+    margin-left: 28px;
+  }
+  .mission .image {
+    flex: 0 0 800px;       /* fixed thumbnail width */
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    justify-content: center;
+  }
+  .mission .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .mission .card {
+    height: 200px;
   }
   .muted {
     color: var(--muted);
@@ -248,6 +267,7 @@
     ================================ */
   .section-title {
     font-weight: 700;
+    text-align: center;
     margin: 10px 0;
     color: #0f172a
   }
@@ -261,12 +281,14 @@
     scroll-snap-type: x mandatory;
     padding: 12px;
     scroll-behavior: smooth;
+    justify-content: center;
   }
   .carousel::-webkit-scrollbar {
     display: none;
   }
   .product {
     flex: 0 0 260px;
+    justify-content: center;
     background: var(--card);
     padding: 14px;
     border-radius: 12px;
@@ -310,8 +332,8 @@
   ================================ */
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, 220px);
+    gap: 1rem;
   }
   .product-card {
     flex: 0 0 260px;

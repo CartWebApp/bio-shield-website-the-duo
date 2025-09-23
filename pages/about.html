@@ -9,56 +9,76 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <div class="brand"><div class="logo">BS</div><div>BioShield</div></div>
-      <nav>
+      <section class="brand">
+        <div class="logo">BS</div>
+        <span>BioShield</span>
+      </section>
+
+      <nav aria-label="Main navigation">
         <a class="nav-link" href="../index.html">🏠 Home</a>
         <a class="nav-link" href="products.html">🛍️ Products</a>
-        <a class="nav-link" href="about.html">ℹ️ About us</a>
+        <a class="nav-link" href="about.html" aria-current="page">ℹ️ About us</a>
         <a class="nav-link" href="contact.html">📞 Contact</a>
       </nav>
+
       <button class="cart-btn" onclick="window.location.href='cart.html'">🛒 Cart (0)</button>
     </aside>
 
     <main>
-      <section class="hero">
+      <!-- Hero -->
+      <header class="hero">
         <h1>About BioShield</h1>
-      </section>
+      </header>
 
-      <section class="about-section">
-        <div class="card">
-          <h2>Who We Are</h2>
-          <p style="color:var(--muted);">
-            Looking for a mosquito repellent that's <strong>gentle on your skin</strong> and on the planet? BioShield believes nature offers the best protection. We use powerful plant-based ingredients to create repellents that are truly effective and safe for your family. Our team is dedicated to keeping your loved ones safe while also caring for the environment. Every product you choose helps support our mission to <strong>protect families and the planet</strong>. We're giving back to the earth, one bottle at a time.
+      <!-- Who We Are -->
+      <section class="about-section" aria-labelledby="who-we-are">
+        <article class="card">
+          <h2 id="who-we-are">Who We Are</h2>
+          <p class="muted">
+            Looking for a mosquito repellent that's <strong>gentle on your skin</strong> and on the planet? 
+            BioShield believes nature offers the best protection. We use powerful plant-based ingredients 
+            to create repellents that are truly effective and safe for your family. Our team is dedicated 
+            to keeping your loved ones safe while also caring for the environment. Every product you choose 
+            helps support our mission to <strong>protect families and the planet</strong>. We're giving back 
+            to the earth, one bottle at a time.
           </p>
-        </div>
-        <div class="card">
+        </article>
+
+        <figure class="card">
           <img class="images" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop" alt="Team working together">
-        </div>
+        </figure>
       </section>
 
-      <h2 class="section-title">Our Values</h2>
-      <div class="values">
-        <div class="value-card">
+      <!-- Values -->
+      <section class="values" aria-labelledby="values-title">
+        <h2 id="values-title" class="section-title">Our Values</h2>
+
+        <article class="value-card">
           <h3>🌱 Sustainability</h3>
           <p>Eco-friendly formulas and packaging that minimize our impact on the environment.</p>
-        </div>
-        <div class="value-card">
+        </article>
+
+        <article class="value-card">
           <h3>👨‍👩‍👧‍👦 Safety</h3>
           <p>Products gentle enough for kids and pets — without harsh chemicals.</p>
-        </div>
-        <div class="value-card">
+        </article>
+
+        <article class="value-card">
           <h3>🧪 Innovation</h3>
           <p>Constantly researching and improving our products for better protection.</p>
-        </div>
-        <div class="value-card">
+        </article>
+
+        <article class="value-card">
           <h3>🤝 Community</h3>
           <p>Working with local farmers and supporting mosquito-borne disease prevention efforts worldwide.</p>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      <footer>© 2025 BioShield — Made with care.</footer>
+      <!-- Footer -->
+      <footer>
+        © 2025 BioShield — Made with care.
+      </footer>
     </main>
   </div>
 </body>
 </html>
-1`

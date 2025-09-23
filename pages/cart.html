@@ -9,20 +9,33 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <div class="brand"><div class="logo">BS</div><div>BioShield</div></div>
-      <nav>
+      <section class="brand">
+        <div class="logo">BS</div>
+        <span>BioShield</span>
+      </section>
+
+      <nav aria-label="Main navigation">
         <a class="nav-link" href="../index.html">🏠 Home</a>
         <a class="nav-link" href="products.html">🛍️ Products</a>
         <a class="nav-link" href="about.html">ℹ️ About us</a>
         <a class="nav-link" href="contact.html">📞 Contact</a>
       </nav>
+
       <button class="cart-btn" id="cartBtn">🛒 Cart (0)</button>
     </aside>
 
     <main>
-      <h1>Your Cart</h1>
-      <div id="cartContainer"></div>
-      <div id="emptyMessage" class="muted" style="display:none">Your cart is empty.</div>
+      <header class="page-header">
+        <h1>Your Cart</h1>
+      </header>
+
+      <section id="cartContainer" aria-labelledby="cartHeading">
+        <h2 id="cartHeading" class="visually-hidden">Cart Items</h2>
+      </section>
+
+      <p id="emptyMessage" class="muted" style="display:none">
+        Your cart is empty.
+      </p>
     </main>
   </div>
 
@@ -57,7 +70,11 @@
       table.innerHTML = `
         <thead>
           <tr>
-            <th>Product</th><th>Qty</th><th>Price</th><th>Subtotal</th><th></th>
+            <th scope="col">Product</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Price</th>
+            <th scope="col">Subtotal</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -74,14 +91,14 @@
           <td><img src="${img || ''}" alt="${name}"/> ${name}</td>
           <td>
             <div class="qty-controls">
-              <button class="qty-btn">-</button>
+              <button class="qty-btn" aria-label="Decrease quantity">-</button>
               <span>${qty}</span>
-              <button class="qty-btn">+</button>
+              <button class="qty-btn" aria-label="Increase quantity">+</button>
             </div>
           </td>
           <td>$${price.toFixed(2)}</td>
           <td>$${subtotal}</td>
-          <td><button class="remove-btn">Remove</button></td>
+          <td><button class="remove-btn" aria-label="Remove ${name}">Remove</button></td>
         `;
         tbody.appendChild(row);
 
@@ -104,7 +121,7 @@
 
       cartContainer.appendChild(table);
 
-      let summary = document.createElement('div');
+      let summary = document.createElement('section');
       summary.className = 'summary';
       summary.innerHTML = `
         <div class="summary-row"><span>Total:</span><span>$${total.toFixed(2)}</span></div>

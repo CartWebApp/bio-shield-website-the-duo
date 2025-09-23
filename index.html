@@ -9,111 +9,128 @@
 <body>
   <div class="layout"></main>
     <aside class="sidebar">
-      <div class="brand"><div class="logo">BS</div><div>BioShield</div></div>
+      <header class="brand">
+        <span class="logo">BS</span>
+        <span>BioShield</span>
+      </header>
+
       <nav>
         <a class="nav-link" href="#">🏠 Home</a>
         <a class="nav-link" href="pages/products.html">🛍️ Products</a>
         <a class="nav-link" href="pages/about.html">ℹ️ About us</a>
         <a class="nav-link" href="pages/contact.html">📞 Contact</a>
       </nav>
+
       <button class="cart-btn" id="cartBtn" onclick="window.location.href='pages/cart.html'">🛒 Cart (0)</button>
     </aside>
 
     <main>
+      <!-- Hero -->
       <section class="hero" aria-labelledby="hero-title">
         <h1 id="hero-title">Natural mosquito protection that works.</h1>
         <p>
           Our team is dedicated to keeping your loved ones safe while also caring for the environment. Every product you choose helps support our mission to protect families and the planet. We're giving back to the earth, one bottle at a time. 💚
-          </p>
+        </p>
       </section>
 
+      <!-- Mission -->
       <section class="mission">
-        <div class="card">
+        <article class="card">
           <h3>Our Mission</h3>
-          <p class="muted" class="fit">Hello there! We&apos;re on a mission to bring you peace of mind with our mosquito repellents. Our goal is simple: to create formulas that are <strong>safe, effective, and kind to the planet</strong>. We carefully select plant-based ingredients to protect your family from those pesky mosquitoes. You can feel good knowing our products work great <strong>without any harsh chemicals</strong>.
-            </p>
-        </div>
-        <div class="card image">
+          <p class="muted fit">
+            Hello there! We&apos;re on a mission to bring you peace of mind with our mosquito repellents. Our goal is simple: to create formulas that are <strong>safe, effective, and kind to the planet</strong>. We carefully select plant-based ingredients to protect your family from those pesky mosquitoes. You can feel good knowing our products work great <strong>without any harsh chemicals</strong>.
+          </p>
+        </article>
+
+        <figure class="card image">
           <img class="images" src="/images/employees.png" alt="BioShield Employees" width="150%">
-        </div>
+        </figure>
       </section>
 
+      <!-- Featured -->
       <section class="featured">
-        <div class="card image">
+        <figure class="card image">
           <img class="images" src="images/hero-img.png" alt="BioShield Featured Product">
-        </div>
-        <div class="card">
+        </figure>
+
+        <article class="card">
           <h3 class="extra-large-text">Featured</h3>
-          <p class="muted large-text">Protecting your families from pesky mosquitoes is a breeze with our <strong>Featured Products!</strong> These plant-powered formulas are made with essential oils like citronella and peppermint, which naturally repel bugs without any harsh chemicals. They&apos;re gentle enough for even the most sensitive skin and have a refreshing, pleasant scent. Plus, every purchase helps support our commitment to a healthier planet. <strong>Ready to experience nature&apos;s best defense?</strong> Shop now and enjoy your time outdoors, worry-free!
-            </p>
-        </div>
+          <p class="muted large-text">
+            Protecting your families from pesky mosquitoes is a breeze with our <strong>Featured Products!</strong> These plant-powered formulas are made with essential oils like citronella and peppermint, which naturally repel bugs without any harsh chemicals. They&apos;re gentle enough for even the most sensitive skin and have a refreshing, pleasant scent. Plus, every purchase helps support our commitment to a healthier planet. <strong>Ready to experience nature&apos;s best defense?</strong> Shop now and enjoy your time outdoors, worry-free!
+          </p>
+        </article>
       </section>
 
+      <!-- Products -->
       <section id="products">
         <h2 class="section-title">Best sellers</h2>
+
         <div class="carousel-wrap">
-          <div class="carousel" id="carousel">
+          <section class="carousel" id="carousel">
+            
             <article class="product" data-name="Mini Spray" data-price="13.99">
-              <div class="thumb">
+              <figure class="thumb">
                 <img src="images/mini-spray.png" alt="BioShield Spray" width="100%" height="100%"> 
-              </div>
+              </figure>
               <div class="price-row">
                 <div>
-                  <div style="font-weight:600">BioShield Mini&ndash;Spray</div>
-                  <div class="muted" style="font-size:13px">100ml</div>
+                  <strong>BioShield Mini&ndash;Spray</strong>
+                  <p class="muted" style="font-size:13px">100ml</p>
                 </div>
-                <div class="price">$13.99</div>
+                <span class="price">$13.99</span>
               </div>
               <div style="margin-top:10px;text-align:right"><button class="add">Add to cart</button></div>
             </article>
 
             <article class="product" data-name="Roll On" data-price="11.67">
-              <div class="thumb">
+              <figure class="thumb">
                 <img src="images/roll-on.png" alt="BioShield Roll On" width="100%" height="100%">
-              </div>
+              </figure>
               <div class="price-row">
                 <div>
-                  <div style="font-weight:600">BioShield Roll&ndash;On</div>
-                  <div class="muted" style="font-size:13px">30g</div>
+                  <strong>BioShield Roll&ndash;On</strong>
+                  <p class="muted" style="font-size:13px">30g</p>
                 </div>
-                <div class="price">$11.67</div>
+                <span class="price">$11.67</span>
               </div>
               <div style="margin-top:10px;text-align:right"><button class="add">Add to cart</button></div>
             </article>
 
             <article class="product" data-name="Candle" data-price="9.49">
-              <div class="thumb">
+              <figure class="thumb">
                 <img src="images/candles.png" alt="Candle" width="100%" height="100%">
-              </div>
+              </figure>
               <div class="price-row">
                 <div>
-                  <div style="font-weight:600">BioShield Candle</div>
-                  <div class="muted" style="font-size:13px">200g</div>
+                  <strong>BioShield Candle</strong>
+                  <p class="muted" style="font-size:13px">200g</p>
                 </div>
-                <div class="price">$9.49</div>
+                <span class="price">$9.49</span>
               </div>
               <div style="margin-top:10px;text-align:right"><button class="add">Add to cart</button></div>
             </article>
 
             <article class="product" data-name="Soap Bar" data-price="6.99">
-              <div class="thumb">
+              <figure class="thumb">
                 <img src="images/better-soap.png" alt="BioShield Soap" width="100%" height="100%">
-              </div>
+              </figure>
               <div class="price-row">
                 <div>
-                  <div style="font-weight:600">BioShield Soap</div>
-                  <div class="muted" style="font-size:13px">10ml</div>
+                  <strong>BioShield Soap</strong>
+                  <p class="muted" style="font-size:13px">10ml</p>
                 </div>
-                <div class="price">$6.99</div>
+                <span class="price">$6.99</span>
               </div>
               <div style="margin-top:10px;text-align:right"><button class="add">Add to cart</button></div>
             </article>
-          </div>
 
+          </section>
         </div>
       </section>
 
-      <footer style="margin-top:36px;color:var(--muted);font-size:13px">© 2025 BioShield — Made with care.</footer>
+      <footer style="margin-top:36px;color:var(--muted);font-size:13px">
+        © 2025 BioShield — Made with care.
+      </footer>
     </main>
   </div>
 
@@ -126,8 +143,10 @@
       let cart = {};
 
       // Carousel controls
-      left.addEventListener('click', ()=> carousel.scrollBy({left:-278,behavior:'smooth'}));
-      right.addEventListener('click', ()=> carousel.scrollBy({left:278,behavior:'smooth'}));
+      if(left && right){
+        left.addEventListener('click', ()=> carousel.scrollBy({left:-278,behavior:'smooth'}));
+        right.addEventListener('click', ()=> carousel.scrollBy({left:278,behavior:'smooth'}));
+      }
 
       // Cart handling
       function updateCartBtn(){

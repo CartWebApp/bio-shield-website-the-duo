@@ -9,47 +9,70 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <div class="brand"><div class="logo">BS</div><div>BioShield</div></div>
-      <nav>
+      <header class="brand">
+        <div class="logo">BS</div>
+        <span>BioShield</span>
+      </header>
+
+      <nav aria-label="Main navigation">
         <a class="nav-link" href="../index.html">🏠 Home</a>
         <a class="nav-link" href="products.html">🛍️ Products</a>
         <a class="nav-link" href="about.html">ℹ️ About us</a>
-        <a class="nav-link" href="contact.html">📞 Contact</a>
+        <a class="nav-link" href="contact.html" aria-current="page">📞 Contact</a>
       </nav>
+
       <button class="cart-btn" onclick="window.location.href='cart.html'">🛒 Cart (0)</button>
     </aside>
+
     <main>
       <section class="hero" aria-labelledby="contact-title">
         <h1 id="contact-title">Get in touch with us</h1>
       </section>
+
       <section class="contact-grid">
-        <div class="card">
-          <h3>Send us a message</h3>
+        <article class="card">
+          <h2>Send us a message</h2>
           <form>
-            <div>
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-            <div>
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
-            </div>
-            <button type="submit" class="submit">Send Message</button>
+            <fieldset>
+              <legend class="visually-hidden">Contact form</legend>
+
+              <p>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+              </p>
+
+              <p>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </p>
+
+              <p>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+              </p>
+
+              <button type="submit" class="submit">Send Message</button>
+            </fieldset>
           </form>
-        </div>
-        <div class="card info">
-          <h3>Contact Information</h3>
-          <p><strong>Email:</strong> support@bioshield.com</p>
-          <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-          <p><strong>Address:</strong><br> 123 Greenway Blvd<br>Eco City, Earth 00000</p>
-          <p>We&apos;ll get back to you within 1&ndash;2 business days.</p>
-        </div>
+        </article>
+
+        <article class="card info">
+          <h2>Contact Information</h2>
+          <address>
+            <p><strong>Email:</strong> <a href="mailto:support@bioshield.com">support@bioshield.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            <p><strong>Address:</strong><br>
+              123 Greenway Blvd<br>
+              Eco City, Earth 00000
+            </p>
+          </address>
+          <p>We’ll get back to you within 1–2 business days.</p>
+        </article>
       </section>
-      <footer>© 2025 BioShield — Made with care.</footer>
+
+      <footer>
+        © 2025 BioShield — Made with care.
+      </footer>
     </main>
   </div>
 </body>
